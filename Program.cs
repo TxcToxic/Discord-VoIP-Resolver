@@ -14,7 +14,12 @@ namespace Discord_VoIP_Resolver
                 IPAddress[] addresses = Dns.GetHostAddresses(serverName + ".discord.media");
                 foreach (IPAddress ip in addresses)
                 {
-                    Console.WriteLine($"{serverName} > {ip}");
+                    Console.WriteLine($"{serverName}/media > {ip}");
+                }
+                IPAddress[] addresses2 = Dns.GetHostAddresses(serverName + ".discord.gg");
+                foreach (IPAddress ip2 in addresses2)
+                {
+                    Console.WriteLine($"{serverName}/gg > {ip2}");
                 }
             }
             catch
